@@ -20,3 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/home', function(Request $request) {
     return ['status' => true];
 });
+
+// Name space 
+Route::namespace('API')->name('api')->group(function() {   
+    Route::get('/products', 'ProductController@index')->name('products');
+});
