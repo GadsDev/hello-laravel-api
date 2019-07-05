@@ -21,6 +21,6 @@ Route::get('/home', function(Request $request) {
     return ['status' => true];
 });
 
-Route::namespace('API')->name('api')->group(function() {
+Route::namespace('Api')->name('api.')->group(function() {
     Route::get('/products', 'ProductController@index')->name('products');
 });
